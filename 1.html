@@ -14,8 +14,17 @@
     nostojs(function(api) {
       console.log("showing popup "+id)
       console.log(api.popupCampaigns())
-      console.log(api.openPopup(id));
+      api.openPopup(id);
     });
+  }
+    function showPopupFromList(){
+        nostojs(function(api) {
+          var arrayOfPopupCampaigns = api.popupCampaigns()
+          var popupCampaignId = arrayOfPopupCampaigns[0].id
+          console.log("showing popup "+popupCampaignId)
+          console.log(api.popupCampaigns())
+          api.openPopup(popupCampaignId)
+        });
   }
 </script>
 </head>
@@ -42,6 +51,8 @@
   
 <input id="popupid" size="40" type="text" value="5e5e21f0ffd4f271d82b8d94"></input>
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
+<input type="button" value="show popup from list" onclick="showPopupFromList()"/>
+
 
 </body>
 </html>
