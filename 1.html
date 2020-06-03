@@ -9,6 +9,15 @@
     }
   </style>
   <script src="//connect.staging.nosto.com/include/vlad"></script>
+  <script>
+  function showPopup(id){
+    nostojs(function(api) {
+      console.log("showing popup "+id)
+      console.log(api.popupCampaigns())
+      console.log(api.openPopup(id));
+    });
+  }
+</script>
 </head>
 <body>
   <div class="nosto_page_type" style="display:none">product</div>
@@ -26,10 +35,13 @@
   <span class="list_price">120</span>
   <span class="brand">Demo</span>
 </div>
-          <div class="nosto_element" id="nosto-page-product1"></div>
-          <div class="nosto_element" id="nosto-page-product2"></div>
+<div class="nosto_element" id="nosto-page-product1"></div>
+<div class="nosto_element" id="nosto-page-product2"></div>
 
-          <div class="nosto_element" id="nosto-page-product3"></div>
+<div class="nosto_element" id="nosto-page-product3"></div>
+  
+<input id="popupid" type="text" value="5e5e21f0ffd4f271d82b8d94"></input>
+<input type="button" onclick="showPopup(document.getElementById('popupid').value)"/>
 
 </body>
 </html>
