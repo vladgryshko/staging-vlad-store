@@ -23,7 +23,7 @@
           var popupCampaignId = arrayOfPopupCampaigns[0].id
           console.log("showing popup "+popupCampaignId)
           console.log(api.popupCampaigns())
-          api.openPopup(popupCampaignId)
+          api.openPopup(popupCampaignId, {preview:true})
         });
   }
 </script>
@@ -51,7 +51,7 @@
   
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
   
-<input id="popupid" size="40" type="text" value="5e5e21f0ffd4f271d82b8d94"></input>
+<input id="popupid" size="40" type="text" value="5ed73e2560b22b51915c3301"></input>
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
   
   
