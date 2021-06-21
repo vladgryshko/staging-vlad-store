@@ -26,6 +26,27 @@
           api.openPopup(popupCampaignId, {preview:true})
         });
   }
+    
+ function addToCart(){   
+ nostojs(api => {
+  api.defaultSession()
+   .setCart({
+     items: [
+     
+      {
+        name: "Product 1",
+        price_currency_code: "USD",
+        product_id: "1",
+        quantity: 1,
+        unit_price: 100.00
+      }
+    ]
+   })
+   .viewCart()
+   .update()
+});
+ }
+
 </script>
 </head>
 <body>
@@ -55,7 +76,7 @@
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
   
   
-<input type="button" value="add to cart product 1" onclick='nostojs(function(api) {api.recommendedProductAddedToCart("1", "nosto-categorypage-1");});'/>
+<input type="button" value="add to cart product 1" onclick='addToCart();'/>
 
 
 </body>
