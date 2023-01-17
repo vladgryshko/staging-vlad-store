@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
-   <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6P5TQ55WZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Y6P5TQ55WZ');
-</script>
-  <meta charset="UTF-8">
-  <title>Product 1</title>
-  <style>
-    .nosto_product span {
-      display: block;
-    }
-  </style>
-  <script src="//connect.staging.nosto.com/include/vlad"></script>
-  <script>
-  function showPopup(id){
-    nostojs(function(api) {
-      console.log("showing popup "+id)
-      console.log(api.popupCampaigns())
-      api.openPopup(id);
-    });
-  }
-    function showPopupFromList(){
-        nostojs(function(api) {
-          var arrayOfPopupCampaigns = api.popupCampaigns()
-          var popupCampaignId = arrayOfPopupCampaigns[0].id
-          console.log("showing popup "+popupCampaignId)
-          console.log(api.popupCampaigns())
-          api.openPopup(popupCampaignId, {preview:true})
-        });
-  }
-    
- function addToCart(){   
- nostojs(api => {
-  api.defaultSession()
-   .setCart({
-     items: [
-     
-      {
-        name: "Product 1",
-        price_currency_code: "USD",
-        product_id: "1",
-        quantity: 1,
-        unit_price: 100.00
-      }
-    ]
-   })
-   .viewCart()
-   .update()
-});
- }
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6P5TQ55WZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y6P5TQ55WZ');
+    </script>
+    <meta charset="UTF-8">
+    <title>Product 1</title>
+    <style>
+        .nosto_product span {
+            display: block;
+        }
+    </style>
+    <script src="//connect.staging.nosto.com/include/vlad"></script>
+    <script>
+        function showPopup(id) {
+            nostojs(function (api) {
+                console.log("showing popup " + id)
+                console.log(api.popupCampaigns())
+                api.openPopup(id);
+            });
+        }
+
+        function showPopupFromList() {
+            nostojs(function (api) {
+                var arrayOfPopupCampaigns = api.popupCampaigns()
+                var popupCampaignId = arrayOfPopupCampaigns[0].id
+                console.log("showing popup " + popupCampaignId)
+                console.log(api.popupCampaigns())
+                api.openPopup(popupCampaignId, {preview: true})
+            });
+        }
+
+        function addToCart() {
+            nostojs(api => {
+                api.defaultSession()
+                    .setCart({
+                        items: [
+
+                            {
+                                name: "Product 1",
+                                price_currency_code: "USD",
+                                product_id: "1",
+                                quantity: 1,
+                                unit_price: 100.00
+                            }
+                        ]
+                    })
+                    .viewCart()
+                    .update()
+            });
+        }
+
+    </script>
 </head>
 <body>
-  <div class="nosto_page_type" style="display:none">product</div>
-<div class="nosto_product">
-  <span class="url">https://vladgryshko.github.io/staging-vlad-store/1.html</span>
-  <span class="product_id">1</span>
-  <span class="name">Product 1</span>
-  <span class="image_url">https://vladgryshko.github.io/staging-vlad-store/1.webp</span>
-  <span class="price">100.00</span>
-  <span class="price_currency_code">USD</span>
-  <span class="availability">InStock</span>
-  <span class="category">/Cat 1</span>
-  <span class="category">/discount</span>
-  <span class="description">Demo product 1</span>
-  <span class="list_price">120</span>
-  <span class="brand">Demo</span>
-  <span class="selected_sku_id">1</span>
-
-  <span class="nosto_sku">
+<div class="nosto_page_type" style="display:none">product</div>
+<div class="nosto_product" style="display:none">
+    <span class="url">https://vladgryshko.github.io/staging-vlad-store/1.html</span>
+    <span class="product_id">1</span>
+    <span class="name">Product 1</span>
+    <span class="image_url">https://vladgryshko.github.io/staging-vlad-store/1.webp</span>
+    <span class="price">100.00</span>
+    <span class="price_currency_code">USD</span>
+    <span class="availability">InStock</span>
+    <span class="category">/Cat 1</span>
+    <span class="category">/discount</span>
+    <span class="description">Demo product 1</span>
+    <span class="list_price">120</span>
+    <span class="brand">Demo</span>
     <span class="selected_sku_id">1</span>
 
-    <span class="id">1</span>
+    <span class="nosto_sku">
+
+      <span class="id">1</span>
       <span class="name">S-Orange</span>
       <span class="price">1269.00</span>
       <span class="list_price">1299.00</span>
@@ -95,7 +99,7 @@
       </span>
   </span>
 
-  <span class="nosto_sku">
+    <span class="nosto_sku">
     <span class="id">2</span>
       <span class="name">S-Blue</span>
       <span class="price">1269.00</span>
@@ -111,27 +115,19 @@
   </span>
 </div>
 
-<script>
-   document.getElementById('body')
-  var img = document.createElement('img');
-            img.src = document.querySelector("body > div.nosto_product > span.image_url").value
+<script src="render.js"/>
 
-            document.getElementById('body').appendChild(img);
-            down.innerHTML = "Image Element Added.";
-</script>
-body > div.nosto_product > span.image_url
-<img src="https://vladgryshko.github.io/staging-vlad-store/1.webp" width="50"/>
 <div class="nosto_element" id="nosto-page-product1"></div>
 <div class="nosto_element" id="nosto-page-product2"></div>
 
 <div class="nosto_element" id="nosto-page-product3"></div>
-  
+
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
-  
+
 <input id="popupid" size="40" type="text" value="5ed73e2560b22b51915c3301"></input>
 <input type="button" value="show popup" onclick="showPopup(document.getElementById('popupid').value)"/>
-  
-  
+
+
 <input type="button" value="add to cart product 1" onclick='addToCart();'/>
 222 bypass?
 <iframe is="x-frame-bypass" src="https://my.nosto.com/admin/qsjhb97s/campaigns/emails/sentmails"></iframe>
