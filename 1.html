@@ -79,6 +79,8 @@
   <span class="selected_sku_id">1</span>
 
   <span class="nosto_sku">
+    <span class="selected_sku_id">1</span>
+
     <span class="id">1</span>
       <span class="name">S-Orange</span>
       <span class="price">1269.00</span>
@@ -108,7 +110,17 @@
       </span>
   </span>
 </div>
-<img src="https://vladgryshko.github.io/staging-vlad-store/1.webp" width="500"/>
+
+<script>
+   document.getElementById('body')
+  var img = document.createElement('img');
+            img.src = document.querySelector("body > div.nosto_product > span.image_url").value
+
+            document.getElementById('body').appendChild(img);
+            down.innerHTML = "Image Element Added.";
+</script>
+body > div.nosto_product > span.image_url
+<img src="https://vladgryshko.github.io/staging-vlad-store/1.webp" width="50"/>
 <div class="nosto_element" id="nosto-page-product1"></div>
 <div class="nosto_element" id="nosto-page-product2"></div>
 
