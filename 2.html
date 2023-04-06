@@ -20,6 +20,15 @@
   <script src="//connect.staging.nosto.com/include/vlad"></script>
 </head>
 <body>
+  
+  <script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+    'value': 1.0,
+    'currency': 'EUR',
+    'transaction_id': '12345',
+  });
+  </script>
   <div class="nosto_page_type" style="display:none">product</div>
 
   <div class="nosto_product">
