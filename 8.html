@@ -49,8 +49,11 @@
 
           <div class="nosto_element" id="nosto-page-product3"></div>
   <script src="render.js"></script>
-  <script>nostojs(api => api.visit.setDoNotTrack(true));
-  console.warn("setDoNotTrack(true)")
-  </script>
+ <script>
+  setTimeout(() => {
+    nostojs(api => api.visit.setDoNotTrack(true));
+    console.warn("setDoNotTrack(true)");
+  }, 200);
+</script>
 </body>
 </html>
