@@ -19,9 +19,7 @@
     }
   </style>
   <script src="//connect.staging.nosto.com/include/vlad"></script>
-  <script>nostojs(api => api.visit.setDoNotTrack(true));
-  console.warn("setDoNotTrack(true)")
-  </script>
+
 </head>
 <body>
   <div class="nosto_page_type" style="display:none">product</div>
@@ -51,6 +49,8 @@
 
           <div class="nosto_element" id="nosto-page-product3"></div>
   <script src="render.js"></script>
-
+  <script>nostojs(api => api.visit.setDoNotTrack(true));
+  console.warn("setDoNotTrack(true)")
+  </script>
 </body>
 </html>
