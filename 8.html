@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Do not track</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6P5TQ55WZ"></script>
 <script>
@@ -18,6 +19,7 @@
     }
   </style>
   <script src="//connect.staging.nosto.com/include/vlad"></script>
+
 </head>
 <body>
   <div class="nosto_page_type" style="display:none">product</div>
@@ -52,6 +54,11 @@
 
           <div class="nosto_element" id="nosto-page-product3"></div>
   <script src="render.js"></script>
-
+ <script>
+  setTimeout(() => {
+    nostojs(api => api.visit.setDoNotTrack(true));
+    console.warn("setDoNotTrack(true)");
+  }, 200);
+</script>
 </body>
 </html>
