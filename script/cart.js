@@ -41,18 +41,17 @@
     }
     const items = readCart();
     nostojs((api) => {
-      const session = api
-        .defaultSession()
-        .setCart({
-          items: items.map((item) => ({
-            name: item.name,
-            price_currency_code: item.currency || "USD",
-            product_id: item.productId,
-            quantity: item.quantity,
-            sku_id: item.skuId,
-            unit_price: item.price,
-          })),
-        });
+      const session = api.defaultSession();
+      session.setCart({
+        items: items.map((item) => ({
+          name: item.name,
+          price_currency_code: item.currency || "USD",
+          product_id: item.productId,
+          quantity: item.quantity,
+          sku_id: item.skuId,
+          unit_price: item.price,
+        })),
+      });
       if (action === "view") {
         session.viewCart();
       }
