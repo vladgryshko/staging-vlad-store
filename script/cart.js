@@ -51,11 +51,11 @@
           sku_id: item.skuId,
           unit_price: item.price,
         })),
-      });
-      if (action === "view") {
-        session.viewCart();
-      }
-      session.update();
+      })
+          .viewCart()
+          .update();
+
+
     });
   };
 
