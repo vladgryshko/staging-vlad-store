@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0726eb09-27f7-467c-b2aa-64e06a0bf720" name="Changes" comment="added 10 more products" />
+    <list default="true" id="0726eb09-27f7-467c-b2aa-64e06a0bf720" name="Changes" comment="added 10 more products">
+      <change beforePath="$PROJECT_DIR$/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10.html" beforeDir="false" afterPath="$PROJECT_DIR$/10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.html" beforeDir="false" afterPath="$PROJECT_DIR$/11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.html" beforeDir="false" afterPath="$PROJECT_DIR$/12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/13.html" beforeDir="false" afterPath="$PROJECT_DIR$/13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14.html" beforeDir="false" afterPath="$PROJECT_DIR$/14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15.html" beforeDir="false" afterPath="$PROJECT_DIR$/15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/16.html" beforeDir="false" afterPath="$PROJECT_DIR$/16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/17.html" beforeDir="false" afterPath="$PROJECT_DIR$/17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/18.html" beforeDir="false" afterPath="$PROJECT_DIR$/18.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/19.html" beforeDir="false" afterPath="$PROJECT_DIR$/19.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20.html" beforeDir="false" afterPath="$PROJECT_DIR$/20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21.html" beforeDir="false" afterPath="$PROJECT_DIR$/21.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.html" beforeDir="false" afterPath="$PROJECT_DIR$/4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.html" beforeDir="false" afterPath="$PROJECT_DIR$/5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.html" beforeDir="false" afterPath="$PROJECT_DIR$/6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7.html" beforeDir="false" afterPath="$PROJECT_DIR$/7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.html" beforeDir="false" afterPath="$PROJECT_DIR$/8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9.html" beforeDir="false" afterPath="$PROJECT_DIR$/9.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +42,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "vladgryshko"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vladgryshko&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vladgryshko/staging-vlad-store.git",
-    "accountId": "c147c8f2-0e3f-4b9d-be53-3f0bcc61632d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vladgryshko/staging-vlad-store.git&quot;,
+    &quot;accountId&quot;: &quot;c147c8f2-0e3f-4b9d-be53-3f0bcc61632d&quot;
   }
-}]]></component>
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="yeQiuHVY" />
   </component>
@@ -55,6 +77,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -71,8 +94,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
       </set>
     </attachedChunks>
   </component>
@@ -87,6 +109,7 @@
       <workItem from="1707737456579" duration="2187000" />
       <workItem from="1707743416727" duration="5000" />
       <workItem from="1753087154591" duration="2445000" />
+      <workItem from="1764233958902" duration="409000" />
     </task>
     <task id="LOCAL-00001" summary="Add email form">
       <option name="closed" value="true" />
