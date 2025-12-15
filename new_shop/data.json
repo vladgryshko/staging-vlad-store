@@ -1,0 +1,840 @@
+[
+  {
+    "productId": "1",
+    "name": "Wood Dress - Urban Spring (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/1.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat 1",
+      "/discount"
+    ],
+    "description": "Demo product 1",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "red",
+      "productType": "dress",
+      "collection": "Urban",
+      "season": "Spring"
+    },
+    "skus": [
+      {
+        "id": "1",
+        "name": "S-Orange",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 55,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/1.html#/1-size-s/13-color-orange",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/1-1.jpeg",
+        "availability": "InStock",
+        "customFields": {
+          "size": "S",
+          "color": "Orange"
+        }
+      },
+      {
+        "id": "2",
+        "name": "S-Blue",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 12,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/1.html#/1-size-s/14-color-blue",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/1-2.jpeg",
+        "availability": "InStock",
+        "customFields": {
+          "size": "S",
+          "color": "Blue"
+        }
+      }
+    ]
+  },
+  {
+    "productId": "2",
+    "name": "Glass Hat - Coastal Summer (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/2.webp",
+    "price": 10,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount"
+    ],
+    "description": "Demo product 2",
+    "brand": "Demo",
+    "listPrice": 10,
+    "tags": {
+      "tag1": [
+        "gender:male",
+        "adventurous",
+        "chill",
+        "vibrant",
+        "elegant",
+        "bold",
+        "casual",
+        "eclectic",
+        "avant-garde",
+        "whimsical",
+        "organic",
+        "energetic",
+        "vintage-modern",
+        "boho",
+        "tropical",
+        "industrial",
+        "outgoing",
+        "classy",
+        "tech-savvy",
+        "sustainable",
+        "romantic-modern",
+        "wholesome",
+        "adventurous-classic",
+        "eco-chic",
+        "vintage-glam",
+        "boho-vintage",
+        "simple",
+        "bold-modern",
+        "edgy-sporty",
+        "stylish",
+        "sophisticated-modern",
+        "urban-chic",
+        "classic-modern",
+        "minimalist-chic",
+        "rustic-elegant",
+        "luxury-sporty",
+        "vibrant-fun",
+        "nature-inspired",
+        "boho-beachy",
+        "modern-athletic",
+        "preppy-sporty",
+        "eclectic-modern",
+        "timeless-elegant",
+        "vintage-modern",
+        "relaxed-modern",
+        "retro-fun",
+        "bold-elegant",
+        "nautical-chic",
+        "professional-modern",
+        "mysterious-chic",
+        "glam-modern",
+        "art-deco-modern",
+        "country-chic",
+        "boho-chic-elegant",
+        "urban-modern",
+        "sleek-modern",
+        "beachy-fun",
+        "retro-glam",
+        "timeless-classic",
+        "urban-fun",
+        "edgy-chic",
+        "romantic-chic",
+        "laid-back-chic",
+        "glitzy-fun",
+        "artistic-modern",
+        "futuristic-chic",
+        "eco-friendly-modern",
+        "street-chic",
+        "glam-sporty",
+        "energetic-sporty",
+        "vivid-modern",
+        "rustic-modern",
+        "sunny-modern"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Coastal",
+      "season": "Summer"
+    },
+    "skus": [
+      {
+        "id": "1",
+        "name": "S-Orange",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 55,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/2.html#/1-size-s/13-color-orange",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/2-1.webp",
+        "availability": "InStock",
+        "customFields": {
+          "size": "S",
+          "color": "Orange"
+        }
+      },
+      {
+        "id": "2",
+        "name": "S-Blue",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 12,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/2.html#/1-size-s/14-color-blue",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/2-2.webp",
+        "availability": "InStock",
+        "customFields": {
+          "size": "S",
+          "color": "Blue"
+        }
+      }
+    ]
+  },
+  {
+    "productId": "3",
+    "name": "Glass Bottoms - Alpine Winter (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/3.webp",
+    "price": 1000,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount"
+    ],
+    "description": "Demo product 3",
+    "brand": "Demo",
+    "listPrice": 1200,
+    "tags": {
+      "tag1": [
+        "gender:male",
+        "sleek-elegant",
+        "coastal",
+        "festive-glam",
+        "urban-retro",
+        "boho-luxe",
+        "graceful",
+        "sophisticated-classic",
+        "cosmopolitan",
+        "bold-artsy",
+        "vintage-athletic",
+        "colorful-boho",
+        "retro-chic",
+        "artsy-glam",
+        "adventurous-urban",
+        "classic-preppy",
+        "natural",
+        "playful-modern",
+        "elegant-timeless",
+        "boho-rustic",
+        "chill-vibes",
+        "sunny-beachy",
+        "sophisticated-sporty",
+        "glam-vintage",
+        "retro-elegant",
+        "artistic-elegant",
+        "eclectic-boho",
+        "modern-industrial",
+        "adventurous-classic",
+        "whimsical-chic",
+        "bohemian-glam",
+        "sporty-chic",
+        "luxurious-minimal",
+        "elegant-modern",
+        "classic-glam",
+        "vibrant-chic",
+        "artistic-minimalist",
+        "industrial-chic",
+        "modern-minimalist",
+        "bold-classic",
+        "rustic-chic",
+        "urban-athletic",
+        "vintage-boho",
+        "nautical-retro",
+        "preppy-modern",
+        "streetwear-urban",
+        "stylish-minimal",
+        "cozy-classic",
+        "energetic-modern",
+        "sophisticated-boho",
+        "art-deco-glam",
+        "rustic-vintage",
+        "exotic-modern",
+        "bohemian-elegant",
+        "sleek-retro",
+        "cozy-minimalist",
+        "glam-chic",
+        "futuristic-minimal",
+        "sporty-modern",
+        "laid-back-elegant",
+        "electric",
+        "organic"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "green",
+      "productType": "bottoms",
+      "collection": "Alpine",
+      "season": "Winter"
+    },
+    "skus": [
+      {
+        "id": "1",
+        "name": "M-Orange",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 55,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/3.html#/1-size-s/13-color-orange",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/3-1.webp",
+        "availability": "InStock",
+        "customFields": {
+          "size": "M",
+          "color": "Orange"
+        }
+      },
+      {
+        "id": "2",
+        "name": "S-Green",
+        "price": 1269,
+        "listPrice": 1299,
+        "inventoryLevel": 12,
+        "url": "https://vladgryshko.github.io/staging-vlad-store/3.html#/1-size-s/14-color-blue",
+        "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/3-2.webp",
+        "availability": "InStock",
+        "customFields": {
+          "size": "S",
+          "color": "Green"
+        }
+      }
+    ]
+  },
+  {
+    "productId": "4",
+    "name": "Wood Tshirts - Desert Autumn (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/4.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount"
+    ],
+    "description": "Demo product 4",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:female",
+        "urban-vintage",
+        "vibrant-minimal",
+        "sustainable-living",
+        "outdoor-adventure",
+        "modern-chic",
+        "boho-retro",
+        "futuristic-sleek",
+        "artistic-bold",
+        "athletic-classic",
+        "timeless-modern",
+        "street-cool",
+        "vivid-artsy",
+        "minimal-luxury",
+        "casual-modern",
+        "refined",
+        "vintage-coastal",
+        "industrial-vibes",
+        "elegant-minimalist",
+        "retro-modern",
+        "playful-retro",
+        "grunge-modern",
+        "sophisticated-vintage",
+        "artistic-chic",
+        "luxe-sporty",
+        "boho-artsy",
+        "modern-elegance",
+        "adventurous-glam",
+        "polished-classic",
+        "energetic-glam",
+        "beach-retro",
+        "laid-back-modern",
+        "rustic-boho",
+        "timeless-chic",
+        "nautical-vibes",
+        "vintage-glamour",
+        "retro-athletic",
+        "cosmopolitan-modern",
+        "elegant-coastal",
+        "whimsical-modern",
+        "luxurious-boho",
+        "country-modern",
+        "classic-minimalist",
+        "art-deco-retro",
+        "nautical-sophisticated",
+        "modern-glam",
+        "sleek-vintage",
+        "chill-athletic",
+        "urban-sporty",
+        "bohemian-coastal",
+        "bold-retro",
+        "classic-rugged",
+        "glam-beachy",
+        "preppy-classic",
+        "sunny-rustic",
+        "refined-elegant",
+        "cozy-glam",
+        "energetic-vintage",
+        "sophisticated-minimal",
+        "adventurous-boho",
+        "urban-timeless",
+        "sporty-luxe",
+        "electric",
+        "organic"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "yellow",
+      "productType": "tshirts",
+      "collection": "Desert",
+      "season": "Autumn"
+    },
+    "skus": []
+  },
+  {
+    "productId": "5",
+    "name": "Glass Hat - City Summer (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/5.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount"
+    ],
+    "description": "Demo product 4",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "City",
+      "season": "Summer"
+    },
+    "skus": []
+  },
+  {
+    "productId": "6",
+    "name": "Wood Dress - Forest Autumn (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/6.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount",
+      "/sale"
+    ],
+    "description": "Demo product 6",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Forest",
+      "season": "Autumn"
+    },
+    "skus": []
+  },
+  {
+    "productId": "7",
+    "name": "Glass Hat - City Spring (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/7.jpeg",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount",
+      "/sale"
+    ],
+    "description": "Demo product 6",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "City",
+      "season": "Spring"
+    },
+    "skus": []
+  },
+  {
+    "productId": "8",
+    "name": "Wood Dress - Street Winter (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/8.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount",
+      "/sale"
+    ],
+    "description": "Demo product 8",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Street",
+      "season": "Winter"
+    },
+    "skus": []
+  },
+  {
+    "productId": "9",
+    "name": "Glass Hat - Garden Spring (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/9.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount",
+      "/sale"
+    ],
+    "description": "Demo product 9",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Garden",
+      "season": "Spring"
+    },
+    "skus": []
+  },
+  {
+    "productId": "10",
+    "name": "Wood Dress - Studio Spring (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/10.webp",
+    "price": 100,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/Cat1",
+      "/discount",
+      "/sale"
+    ],
+    "description": "Demo product 10",
+    "brand": "Demo",
+    "listPrice": 120,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Studio",
+      "season": "Spring"
+    },
+    "skus": []
+  },
+  {
+    "productId": "12",
+    "name": "Wood Dress - Museum Summer (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/2.webp",
+    "price": 150.5,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 12",
+    "brand": "Demo",
+    "listPrice": 180.6,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Museum",
+      "season": "Summer"
+    },
+    "skus": []
+  },
+  {
+    "productId": "13",
+    "name": "Glass Hat - Mountain Winter (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/3.webp",
+    "price": 200,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 13",
+    "brand": "Demo",
+    "listPrice": 240,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Mountain",
+      "season": "Winter"
+    },
+    "skus": []
+  },
+  {
+    "productId": "14",
+    "name": "Wood Dress - Campus Spring (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/4.webp",
+    "price": 320,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 14",
+    "brand": "Demo",
+    "listPrice": 350,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Campus",
+      "season": "Spring"
+    },
+    "skus": []
+  },
+  {
+    "productId": "15",
+    "name": "Glass Hat - Harbor Summer (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/5.webp",
+    "price": 400,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 15",
+    "brand": "Demo",
+    "listPrice": 450,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Harbor",
+      "season": "Summer"
+    },
+    "skus": []
+  },
+  {
+    "productId": "16",
+    "name": "Wood Dress - Gallery Autumn (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/6.webp",
+    "price": 500,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 16",
+    "brand": "Demo",
+    "listPrice": 550,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Gallery",
+      "season": "Autumn"
+    },
+    "skus": []
+  },
+  {
+    "productId": "17",
+    "name": "Glass Hat - Boardwalk Spring (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/7.jpeg",
+    "price": 600,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 17",
+    "brand": "Demo",
+    "listPrice": 650,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Boardwalk",
+      "season": "Spring"
+    },
+    "skus": []
+  },
+  {
+    "productId": "18",
+    "name": "Wood Dress - Festival Summer (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/8.webp",
+    "price": 700,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 18",
+    "brand": "Demo",
+    "listPrice": 750,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Festival",
+      "season": "Summer"
+    },
+    "skus": []
+  },
+  {
+    "productId": "19",
+    "name": "Glass Hat - Opera Winter (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/9.webp",
+    "price": 800,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 19",
+    "brand": "Demo",
+    "listPrice": 850,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Opera",
+      "season": "Winter"
+    },
+    "skus": []
+  },
+  {
+    "productId": "20",
+    "name": "Wood Dress - Studio Autumn (M)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/10.webp",
+    "price": 900,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 20",
+    "brand": "Demo",
+    "listPrice": 950,
+    "tags": {
+      "tag1": [
+        "gender:male"
+      ]
+    },
+    "customFields": {
+      "material": "wood",
+      "color": "green",
+      "productType": "dress",
+      "collection": "Studio",
+      "season": "Autumn"
+    },
+    "skus": []
+  },
+  {
+    "productId": "21",
+    "name": "Glass Hat - Gallery Spring (F)",
+    "imageUrl": "https://vladgryshko.github.io/staging-vlad-store/11.webp",
+    "price": 1000,
+    "currency": "USD",
+    "availability": "InStock",
+    "categories": [
+      "/CatNew"
+    ],
+    "description": "Demo product 21",
+    "brand": "Demo",
+    "listPrice": 1050,
+    "tags": {
+      "tag1": [
+        "gender:female"
+      ]
+    },
+    "customFields": {
+      "material": "glass",
+      "color": "yellow",
+      "productType": "hat",
+      "collection": "Gallery",
+      "season": "Spring"
+    },
+    "skus": []
+  }
+]

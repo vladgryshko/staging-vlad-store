@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlad Demo Store - SPA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Nosto Script -->
+    <script src="//connect.staging.nosto.com/include/vlad"></script>
+
+    <!-- Google Analytics (from original) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6P5TQ55WZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Y6P5TQ55WZ');
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="container">
+                <h1><a href="#/">Vlad Demo Store</a></h1>
+                <div class="header-controls">
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <a href="#/cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="container">
+            <!-- Content injected here -->
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
