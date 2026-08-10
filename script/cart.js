@@ -1,6 +1,7 @@
 // Simple cart helper for demo store
 (function () {
   const CART_KEY = "demo-cart-items";
+  const CART_TAGGING_ID = "nosto-cart-tagging";
 
   const readCart = () => {
     try {
@@ -14,6 +15,9 @@
   const writeCart = (items) => {
     localStorage.setItem(CART_KEY, JSON.stringify(items));
     updateHeaderCount(items);
+    // The cart changed, so the tagging must be re-rendered and re-sent.
+    renderCartTagging(items);
+    resendCartTagging();
   };
 
   const getText = (root, selector) => {
@@ -35,31 +39,90 @@
     }
   };
 
-  const syncNostoCart = (action = "update") => {
-    if (typeof nostojs !== "function") {
-      return;
+  // --- Nosto cart tagging ----------------------------------------------------
+  // This store is a classic (non-SPA) site that feeds Nosto through DOM tagging
+  // (.nosto_product, .nosto_page_type, .nosto_category), so the cart is tagged
+  // the same way: a hidden .nosto_cart block that must be present on *every*
+  // page load. The Session API (setCart/viewCart) is the SPA equivalent and must
+  // not be mixed in here — calling .viewCart() from a product page would report
+  // a cart view that never happened.
+  // https://docs.nosto.com/techdocs/implementing-nosto/implement-on-your-website/manual-implementation/cart-tagging
+
+  const taggedSpan = (className, value) => {
+    const el = document.createElement("span");
+    el.className = className;
+    el.textContent = String(value == null ? "" : value);
+    return el;
+  };
+
+  // product_id and sku_id must match the product tagging, otherwise attribution
+  // and statistics drift apart.
+  const lineItemEl = (item) => {
+    const row = document.createElement("div");
+    row.className = "line_item";
+    row.appendChild(taggedSpan("product_id", item.productId));
+    row.appendChild(taggedSpan("sku_id", item.skuId));
+    row.appendChild(taggedSpan("quantity", item.quantity));
+    row.appendChild(taggedSpan("name", item.name));
+    row.appendChild(taggedSpan("unit_price", Number(item.price || 0).toFixed(2)));
+    row.appendChild(taggedSpan("price_currency_code", item.currency || "USD"));
+    return row;
+  };
+
+  // An empty .nosto_cart element is meaningful: it tells Nosto the cart is empty
+  // (e.g. after the last item was removed). Omitting it would leave the previous
+  // cart contents standing in the session.
+  const renderCartTagging = (items = readCart()) => {
+    const parent = document.body || document.documentElement;
+    if (!parent) return;
+
+    let el = document.getElementById(CART_TAGGING_ID);
+    if (!el) {
+      el = document.createElement("div");
+      el.id = CART_TAGGING_ID;
+      el.className = "nosto_cart";
+      el.style.display = "none";
+      el.setAttribute("translate", "no");
+      parent.appendChild(el);
     }
-    const items = readCart();
-    nostojs((api) => {
-      const session = api.defaultSession();
-      session.setCart({
-        items: items.map((item) => ({
-          name: item.name,
-          price_currency_code: item.currency || "USD",
-          product_id: item.productId,
-          quantity: item.quantity,
-          sku_id: item.skuId,
-          unit_price: item.price,
-        })),
-      })
-          .viewCart()
-          .update();
 
+    el.innerHTML = "";
+    items.forEach((item) => el.appendChild(lineItemEl(item)));
+  };
 
+  // Pushes the freshly rendered tagging to Nosto. Only needed after a mid-page
+  // cart change — on a normal page load the client script reads the tagging
+  // itself. Safe to call before the Nosto script has loaded: nostojs queues the
+  // callback and replays it once the client is ready.
+  const resendCartTagging = () => {
+    if (typeof window.nostojs !== "function") return;
+    window.nostojs((api) => {
+      if (typeof api.resendCartTagging === "function") {
+        api.resendCartTagging();
+      }
     });
   };
 
-  const addItemToCart = (item) => {
+  // Attribution for products added straight from a recommendation. This only
+  // reports *where* the addition came from; the cart contents themselves always
+  // travel via the cart tagging above.
+  const reportRecommendationAddToCart = (productId, slotId) => {
+    if (!slotId || typeof window.nostojs !== "function") return;
+    window.nostojs((api) => {
+      if (typeof api.recommendedProductAddedToCart === "function") {
+        api.recommendedProductAddedToCart(productId, slotId);
+      }
+    });
+  };
+
+  // Nosto placement the node sits in, if any, so additions from a
+  // recommendation can be attributed to it.
+  const slotIdFor = (node) => {
+    const element = node && node.closest ? node.closest(".nosto_element") : null;
+    return element ? element.id : null;
+  };
+
+  const addItemToCart = (item, slotId) => {
     const items = readCart();
     const existing = items.find(
       (entry) => entry.productId === item.productId && entry.skuId === item.skuId
@@ -70,7 +133,7 @@
       items.push(item);
     }
     writeCart(items);
-    syncNostoCart("view");
+    reportRecommendationAddToCart(item.productId, slotId);
   };
 
   const removeItemFromCart = (productId, skuId) => {
@@ -167,17 +230,20 @@
         const button = document.createElement("button");
         button.type = "button";
         button.textContent = `Add ${sku.name || "item"} to cart`;
-        button.addEventListener("click", () =>
-          addItemToCart({
-            productId: sku.productId,
-            skuId: sku.skuId,
-            name: sku.name,
-            price: sku.price,
-            currency: sku.currency,
-            quantity: 1,
-            image: sku.image,
-            url: sku.url,
-          })
+        button.addEventListener("click", (event) =>
+          addItemToCart(
+            {
+              productId: sku.productId,
+              skuId: sku.skuId,
+              name: sku.name,
+              price: sku.price,
+              currency: sku.currency,
+              quantity: 1,
+              image: sku.image,
+              url: sku.url,
+            },
+            slotIdFor(event.currentTarget)
+          )
         );
         list.appendChild(button);
       });
@@ -185,17 +251,20 @@
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = `Add ${productInfo.name || "item"} to cart`;
-      button.addEventListener("click", () =>
-        addItemToCart({
-          productId: productInfo.productId || productInfo.url,
-          skuId: productInfo.productId || productInfo.url,
-          name: productInfo.name,
-          price: productInfo.price,
-          currency: productInfo.currency,
-          quantity: 1,
-          image: productInfo.image,
-          url: productInfo.url,
-        })
+      button.addEventListener("click", (event) =>
+        addItemToCart(
+          {
+            productId: productInfo.productId || productInfo.url,
+            skuId: productInfo.productId || productInfo.url,
+            name: productInfo.name,
+            price: productInfo.price,
+            currency: productInfo.currency,
+            quantity: 1,
+            image: productInfo.image,
+            url: productInfo.url,
+          },
+          slotIdFor(event.currentTarget)
+        )
       );
       list.appendChild(button);
     }
@@ -218,7 +287,6 @@
 
     if (!items.length) {
       list.textContent = "Your cart is empty.";
-      syncNostoCart("view");
       updateHeaderCount(items);
       return;
     }
@@ -261,13 +329,26 @@
       summary.textContent = `Items: ${totalQuantity(items)} | Total: ${total.toFixed(2)}`;
     }
 
-    syncNostoCart("view");
     updateHeaderCount(items);
   };
+
+  // Render the cart tagging immediately rather than on DOMContentLoaded: the
+  // Nosto client script reads the page tagging once the DOM is ready, so the
+  // .nosto_cart block has to exist before that. This is what makes the cart show
+  // up on the very first page view instead of only after the next change.
+  renderCartTagging();
 
   document.addEventListener("DOMContentLoaded", () => {
     createHeader();
     renderAddToCartButtons();
     renderCartPage();
   });
+
+  // Let recommendation templates add to the cart and keep tagging in sync.
+  window.DemoCart = {
+    read: readCart,
+    add: addItemToCart,
+    remove: removeItemFromCart,
+    resendTagging: resendCartTagging,
+  };
 })();
